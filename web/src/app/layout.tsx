@@ -34,7 +34,7 @@ export default function RootLayout({
               <Separator orientation="vertical" className="h-6" />
 
               <Button variant="outline" asChild>
-                <Link href="https://github.com/anderneath/nlw-ai">
+                <Link href="https://github.com/anderneath/nlw-ai" target='_blank'>
                   <Github className="w-4 h-4 mr-2" />
                   GitHub
                 </Link>
