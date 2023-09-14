@@ -10,11 +10,15 @@ export async function createTranscriptionRoute(app: FastifyInstance) {
     const { videoId } = paramsSchema.parse(request.params)
     const { prompt } = bodySchema.parse(request.body)
 
+    console.log('videoid', videoId)
+
     const video = await prisma.video.findUniqueOrThrow({
       where: {
         id: videoId
       }
     })
+
+    console.log(video)
 
     const stream = createReadStream(video.path)
 
@@ -28,7 +32,7 @@ export async function createTranscriptionRoute(app: FastifyInstance) {
     })
 
     const transcription = response.text
-
+    console.log(transcription)
     await prisma.video.update({
       where: {
         id: videoId

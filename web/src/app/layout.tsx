@@ -1,5 +1,4 @@
-import { ThemeProvider } from '@/components/theme-provider'
-import { Button, ModeToggle, Separator } from '@/components/ui'
+import { Button, ModeToggle, Separator, ThemeProvider } from '@/components/ui'
 import { Github } from 'lucide-react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
